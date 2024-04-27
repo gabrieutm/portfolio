@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Titles';
+    src: url(fonts/Monteserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Typing';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Highlight';
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --colortitles: #F2DD72;
+    --colorhighlight: #347EBF;
+    --cor3: #8B4513;
+    --cor4: #172D40;
+    --cor5: #525759;
+    --a1: #0E3A52;
+    --a2: #4A90E2;
+    --a3: #1B4332;
+    --a4: #66CC99;
+
+
+    --texttitles: 'Titles', Arial, Helvetica, serif;
+    --texttyping: 'Typing', Arial, Helvetica, sans-serif;
+    --texthighlight: 'Highlight', Arial, Helvetica, serif;
+}
+
+/*-----i-----cabecalho-----i-----*/
+#menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5vmax;
+    flex: 1;
+}
+
+#menu .menu-item {
+    display: inherit;
+    height: 100%;
+    align-items: center;
+    background-color: var(--cor5);
+    flex: 1;
+}
+
+#menu h1 {
+    width: 25%;
+    justify-content: flex-start;
+    padding-left: 2vw;
+    font: normal 2vw var(--texttitles);
+}
+
+#menu h2 {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: bold 2vw var(--texthighlight);
+}
+
+#menu h2 a {
+    text-decoration: none;
+    color: white;
+    transition: 0.1s ease-in-out;
+}
+
+#menu h2 a:hover {
+    cursor: pointer;
+    color: var(--colorhighlight);
+    font-size: 95%;
+}
+
+/*-----i-----menucascata-----i-----*/
+#menu nav {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    padding-right: 2vw;
+    z-index: 1;
+    flex: 1;
+}
+
+#menu-open, #menu-close {
+    position: absolute;
+    border: none;
+    align-self: flex-end;
+    font-size: 4vw;
+    height: 100%;
+}
+
+#menu-close {
+    display: none;
+}
+
+#menu-open i:hover, #menu-close i:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#menu nav ol {
+    position: relative;
+    background-color: rgba(0, 0, 255, 0.694);
+    list-style: none;
+    align-self: flex-end;
+    width: 60%;
+    top: 100%;
+}
+
+#menu nav ol li button {
+    border: solid 1px transparent;
+    width: 90%;
+    margin: 0.5vw 0;
+    padding: 1vw 0;
+    font: italic 1.5vw var(--texttitles);
+    transition: 0.1s ease-in-out;
+}
+
+#menu nav ol li button:hover {
+    cursor: pointer;
+    border-color: black;
+    letter-spacing: 0.2vw;
+}
+/*-----f-----menucascata-----f-----*/
+
+/*-----f-----cabecalho-----f-----*/
+
+
+
+/*-----i-----intro-----i-----*/
+#main-intro {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: solid 2px orange;
+}
+
+#main-intro header {
+    display: inherit;
+    width: 100%;
+    height: 10%;
+    border: solid 1px blue;
+    text-align: center;
+}
+
+#i-panel {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    border: solid 1px brown;
+}
+
+#i-panel div {
+    display: inherit;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#i-panel img {
+    width: auto;
+    height: auto;
+    border-radius: 150px;
+}
+
+#i-panel p {
+    display: inherit;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 2em;
+}
+
+/*-----f-----intro-----f-----*/
+
+
+
+/*-----i-----sobre-----i-----*/
+
+#main-personal-information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px teal
+}
+
+.pi-topic {
+    width: 70%;
+    border: solid 2px rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pi-topic ul {
+    list-style: none;
+}
+
+#pi-about {
+    text-align: left;
+}
+
+#pi-education {
+    text-align: right;
+}
+
+#pi-skills {
+    text-align: left;
+}
+
+#pi-experience {
+    text-align: right;
+}
+
+/*-----f-----sobre-----f-----*/
+
+
+
+/*-----i-----projetos-----i-----*/
+
+#main-projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    border: solid 2px olive;
+}
+
+#projects {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 30%;
+    border: solid 2px salmon;
+}
+
+/*-----f-----projetos-----f-----*/
+
+
+
+/*-----i-----rodape-----i-----*/
+
+#end-page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    border: solid 2px turquoise;
+    align-items: center;
+}
+
+/*-----f-----rodape-----f-----*/

@@ -1,23 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
-    <header>
-        <!--cabecalho = menu-->
+    <header id="menu">
+        <h1 class="menu-item">Gabriel Machado</h1>
+        <h2 class="menu-item"><a href="https://t.ly/wUAx6">Vamos trabalhar juntos!</a></h2>
+        <nav class="menu-item">
+            <button id="menu-open"><i class="bi bi-filter-right"></i></button>
+            <button id="menu-close"><i class="bi bi-x-diamond-fill"></i></button>
+            <ol>
+                <li>
+                    <button>INÍCIO</button>
+                </li>
+                <li>
+                    <button>SOBRE</button>
+                </li>
+                <li>
+                    <button>EXPERIÊNCIA</button>
+                </li>
+                <li>
+                    <button>PROJETOS</button>
+                </li>
+            </ol>
+        </nav>
     </header>
 
+    <section id="main-intro" class="main">
+        <header><h1>print("Olá, mundo!")</h1></header>
+        <div id="i-panel">
+            <div>
+                <h1>GABRIEL MACHADO</h1>
+                <h2>Desenvolvedor Full-Stack</h2>
+                <h3>Vamos trabalhar juntos!</h3>
+            </div>
+            <img src="images/perfil.jpeg" alt="fotoderosto" title="foto de um menino muito lindo">
+            <p>Se encontrar uma necessidade, descubra uma solução</p>
+        </div>
+    </section>
+
     <section id="main-personal-information" class="main">
-        <header><!--nome--></header>
-        <div><!--apresentacao e informaçoes--></div>
-        <img src="" alt=""><!--foto-->
-        <footer><!--redes--></footer>
+        <div id="pi-about" class="pi-topic">
+            <h1>Sobre mim</h1>
+            <ul>
+                <li>Tenho 25 anos</li>
+                <li>Moro no Brasil, na cidade de Rio Pardo/RS</li>
+            </ul>
+        </div>
+        <div id="pi-education" class="pi-topic">
+            <h1>Educação</h1>
+            <ul>
+                <li>Estudo e exercito programação desde os meus 20 anos</li>
+                <li>Estou cursando Análise e Desenvolvimento de Sistemas pela UNINTER, desde 2021, com previsão de término para JAN/25</li>
+            </ul>
+        </div>
+        <div id="pi-skills" class="pi-topic">
+            <h1>Habilidades</h1>
+            <ul>
+                <li>Python</li>
+                <li>Meu foco é o back-end, seguido pelo banco de dados; mas é claro que também consigo aplicar o front-end</li>
+            </ul>
+        </div>
+        <div id="pi-experience" class="pi-topic">
+            <h1>Experiência</h1>
+            <ul>
+                <li>Analista de Banco de Dados
+                    <div>
+                        <p>trabalhei na mk e tals</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section id="main-projects" class="main">
@@ -33,7 +93,12 @@
             <h1>MOSTRAR MAIS</h1>
         </footer>
     </section>
+
+    <footer id="end-page"><!--contatos-->
+        <div>rodapé</div>
+    </footer>
     
+    <script src="script.js"></script>
 </body>
 
 </html>
