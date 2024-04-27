@@ -41,12 +41,13 @@
 
 /*-----i-----cabecalho-----i-----*/
 #menu {
-    position: relative;
-    display: flex;
+    position: fixed;
+    display: none;
     flex-direction: row;
     width: 100%;
     height: 5vmax;
     flex: 1;
+    z-index: 1;
 }
 
 #menu .menu-item {
@@ -144,9 +145,10 @@
 /*-----i-----intro-----i-----*/
 #main-intro {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 40vw;
     border: solid 2px orange;
 }
 
@@ -156,37 +158,39 @@
     height: 10%;
     border: solid 1px blue;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    font: normal 1vw var(--texthighlight);
 }
 
 #i-panel {
-    display: flex;
+    display: inherit;
+    flex-direction: row;
     width: 100%;
     height: 90%;
-    border: solid 1px brown;
+    border: solid 3px brown;
+    align-items: center;
+    justify-content: center;
 }
 
 #i-panel div {
     display: inherit;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+    width: 35%;
+    font: normal 1.5vw var(--texttitles);
 }
 
 #i-panel img {
-    width: auto;
     height: auto;
-    border-radius: 150px;
+    width: 30%;
 }
 
 #i-panel p {
     display: inherit;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    font-size: 2em;
+    width: 35%;
+    font: italic 2vw var(--texttyping);
 }
 
 /*-----f-----intro-----f-----*/
@@ -200,37 +204,62 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 200vw;
     justify-content: center;
     align-items: center;
-    border: solid 5px teal
+    border: solid 5px teal;
 }
 
 .pi-topic {
-    width: 70%;
+    width: 100%;
+    height: 100%;
     border: solid 2px rebeccapurple;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 2vw 7vw;
 }
 
 .pi-topic ul {
     list-style: none;
 }
 
+.pi-title {
+    text-decoration: underline;
+    font: bold 2.5vw var(--texttitles);
+    letter-spacing: 0.5vw;
+    margin-bottom: 2vw;
+}
+
+.pi-text {
+    font: normal 1.5vw var(--texttyping);
+    line-height: 2vw;
+}
+
 #pi-about {
+    display: inherit;
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: left;
 }
 
 #pi-education {
+    display: inherit;
+    align-items: flex-end;
+    justify-content: flex-start;
     text-align: right;
 }
 
 #pi-skills {
+    display: inherit;
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: left;
 }
 
 #pi-experience {
+    display: inherit;
+    align-items: flex-end;
+    justify-content: flex-start;
     text-align: right;
 }
 
@@ -244,11 +273,24 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vw;
+    border: solid 2px olive;
+}
+
+#main-projects header {
+    display: inherit;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 190px;
-    border: solid 2px olive;
+    height: 20%;
+    border: solid 3px red;
+}
+
+#main-projects header h1 {
+    font: bold 4vw var(--texttitles);
+    letter-spacing: 1vw;
 }
 
 #projects {
@@ -256,9 +298,29 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
-    height: 30%;
-    border: solid 2px salmon;
+    width: 100%;
+    height: 70%;
+    border: solid 5px salmon;
+}
+
+.project {
+    width: 20%;
+    height: 80%;
+    border: solid 5px blue;
+}
+
+#main-projects footer {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border: solid 3px red;
+}
+
+#main-projects footer h1 {
+    font: bold 1vw var(--texttyping);
+    letter-spacing: 0.5vw;
 }
 
 /*-----f-----projetos-----f-----*/
@@ -272,9 +334,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 120px;
-    border: solid 2px turquoise;
+    height: 5vw;
     align-items: center;
+    justify-content: center;
+    border: solid 2px turquoise;
 }
 
 /*-----f-----rodape-----f-----*/
