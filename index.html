@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
     <header id="menu">
-        <h1 class="menu-item">Gabriel Machado</h1>
-        <h2 class="menu-item"><a href="https://t.ly/wUAx6">Vamos trabalhar juntos!</a></h2>
+        <h1 class="menu-item"><strong>Gabriel</strong> Machado</h1>
+        <h2 class="menu-item"><a href="https://t.ly/wUAx6" target="_blank">Vamos trabalhar juntos!</a></h2>
         <nav class="menu-item">
             <button id="menu-open"><i class="bi bi-filter-right"></i></button>
             <button id="menu-close"><i class="bi bi-x-diamond-fill"></i></button>
@@ -36,13 +38,13 @@
     <section id="main-intro" class="main">
         <header><h1>print("Olá, mundo!")</h1></header>
         <div id="i-panel">
-            <div>
-                <h1>GABRIEL MACHADO</h1>
-                <h2>Desenvolvedor Full-Stack</h2>
-                <h3>Vamos trabalhar juntos!</h3>
+            <div id="i-names">
+                <h1><strong>GABRIEL </strong>MACHADO</h1>
+                <h3>Desenvolvedor <strong>Full-Stack</strong></h2>
+                <h5><a href="https://t.ly/wUAx6" target="_blank"><i class="bi bi-arrow-right-circle-fill"></i>Vamos trabalhar juntos!</a></h3>
             </div>
             <img src="images/perfil.jpeg" alt="fotoderosto" title="foto de um menino muito lindo">
-            <p>Se encontrar uma necessidade, descubra uma solução</p>
+            <p>"Se encontrar uma <strong>necessidade</strong>, descubra uma <strong>solução</strong>!"</p>
         </div>
     </section>
 
@@ -50,29 +52,67 @@
         <div id="pi-about" class="pi-topic">
             <h1 class="pi-title">Sobre mim</h1>
             <ul>
-                <li class="pi-text">Tenho 25 anos</li>
-                <li class="pi-text">Moro no Brasil, na cidade de Rio Pardo/RS</li>
-                <li class="pi-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis a quam molestiae distinctio harum? Animi nihil fugit temporibus hic. Aliquam culpa voluptatibus itaque quasi eaque. Voluptates ducimus soluta eius id?</li>
+                <li class="pi-text"><i class="bi bi-caret-right-fill"></i> Tenho <strong>25</strong> anos;</li>
+                <li class="pi-text"><i class="bi bi-caret-right"></i> Moro no <strong>Brasil</strong>, na cidade de <strong>Rio Pardo/RS</strong>, vivendo com meus pais e meu cachorro;</li>
+                <li class="pi-text"><i class="bi bi-caret-right-fill"></i> Meu objetivo a <strong>curto prazo</strong> é conseguir uma vaga de <strong>estágio/júnior</strong> na área da <strong>programação</strong> para poder aplicar meus conhecimentos e aprender cada vez mais ao mesmo tempo que contribuo para o crescimento da sua empresa;</li>
+                <li class="pi-text"><i class="bi bi-caret-right"></i> Meu objetivo a <strong>longo prazo</strong> é me tornar um desenvolvedor Full-Stack <strong>Sênior</strong> e trabalhar com <strong>robótica/IA</strong>;</li>
+                <li class="pi-text"><i class="bi bi-caret-right-fill"></i> Meu maior talento é <strong>aprender</strong> qualquer coisa <strong>rapidamente e facilmente</strong> através da detecção de padrões sobre o assunto - "<strong>Sábio é aquele que aprende com o erro dos outros.</strong>";</li>
+                <li class="pi-text"><i class="bi bi-caret-right"></i> Quer saber mais? <a href="https://t.ly/Zp1yq">Bata um papo comigo!</a></li>
             </ul>
         </div>
         <div id="pi-education" class="pi-topic">
             <h1 class="pi-title">Educação</h1>
             <ul>
-                <li class="pi-text">Estudo e exercito programação desde os meus 20 anos</li>
-                <li class="pi-text">Estou cursando Análise e Desenvolvimento de Sistemas pela UNINTER, desde 2021, com previsão de término para JAN/25</li>
+                <li class="pi-text">Estudo e exercito programação desde os meus <strong>20</strong> anos <i class="bi bi-caret-left"></i></li>
+                <li class="pi-text">Estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> pela UNINTER, desde 2021, com <i class="bi bi-caret-left-fill"></i> previsão de término para <strong>JAN/25</strong></li>
+                <li class="pi-text">Meu foco é o <strong>Back-End</strong>, seguido pela <strong>Administração de Dados</strong> e por último o Front-End <i class="bi bi-caret-left"></i></li>
+                <li class="pi-text">Sou fluente na língua <strong>inglesa </strong><i class="bi bi-caret-left-fill"></i></li>
             </ul>
         </div>
         <div id="pi-skills" class="pi-topic">
             <h1 class="pi-title">Habilidades</h1>
-            <ul>
-                <li class="pi-text">Python</li>
-                <li class="pi-text">Meu foco é o back-end, seguido pelo banco de dados; mas é claro que também consigo aplicar o front-end</li>
+            <ul id="pi-main-list">
+                <li class="pi-text">
+                    <h1 class="pi-subtitle">Back-End</h1>
+                    <ul>
+                        <li class="pi-subtext">Python</li>
+                        <li class="pi-subtext">PHP</li>
+                    </ul>
+                </li>
+                <li class="pi-text">
+                    <h1 class="pi-subtitle">ADM de Dados</h1>
+                    <ul>
+                        <li class="pi-subtext">SQL</li>
+                        <li class="pi-subtext">Postgre</li>
+                        <li class="pi-subtext">MySQL</li>
+                    </ul>
+                </li>
+                <li class="pi-text">
+                    <h1 class="pi-subtitle">Front-End</h1>
+                    <ul>
+                        <li class="pi-subtext">HTML5 e CSS3</li>
+                        <li class="pi-subtext">Javascript</li>
+                    </ul>
+                </li>
+                <li class="pi-text">
+                    <h1 class="pi-subtitle">Ferramentas</h1>
+                    <ul>
+                        <li class="pi-subtext">Putty SSH</li>
+                        <li class="pi-subtext">Docker</li>
+                        <li class="pi-subtext">Git/Github</li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div id="pi-experience" class="pi-topic">
             <h1 class="pi-title">Experiência</h1>
             <ul>
-                <li class="pi-text">Analista de Banco de Dados</li>
+                <li class="pi-text">
+                    <h1>Analista de Banco de Dados</h1>
+                    <ul>
+                        <li>Comecei minha carreira como Atendente de Suporte ao Cliente para o sistema de Planejamento de Recursos Empresariais (<strong>ERP</strong>) projetado para Provedores de Serviço de Internet (ISPs). Após seis meses, fiz a transição para a equipe de Banco de Dados, onde atuei como o principal <strong>analista e desenvolvedor de relatórios</strong> usando SQL via Postgre por mais de um ano.</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </section>

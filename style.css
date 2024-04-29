@@ -24,14 +24,14 @@
 
 :root {
     --colortitles: #F2DD72;
-    --colorhighlight: #347EBF;
-    --cor3: #8B4513;
-    --cor4: #172D40;
-    --cor5: #525759;
-    --a1: #0E3A52;
-    --a2: #4A90E2;
-    --a3: #1B4332;
-    --a4: #66CC99;
+    --colorhighlight: #4169E1;
+    --color1: #778899;
+    --color2: #32CD32;
+    --color3: #4B0082;
+    --color4: #8A2BE2;
+    --color5: #9370DB;
+    --color6: #00CED1;
+    --color7: #00BFFF;
 
 
     --texttitles: 'Titles', Arial, Helvetica, serif;
@@ -48,13 +48,14 @@
     height: 5vmax;
     flex: 1;
     z-index: 1;
+    background-color: black;
+    border-bottom: solid 0.2vw var(--color1);
 }
 
 #menu .menu-item {
     display: inherit;
     height: 100%;
     align-items: center;
-    background-color: var(--cor5);
     flex: 1;
 }
 
@@ -63,6 +64,11 @@
     justify-content: flex-start;
     padding-left: 2vw;
     font: normal 2vw var(--texttitles);
+    color: white;
+}
+
+#menu h1 strong {
+    margin-right: 1vw;
 }
 
 #menu h2 {
@@ -75,13 +81,13 @@
 
 #menu h2 a {
     text-decoration: none;
-    color: white;
+    color: var(--color7);
     transition: 0.1s ease-in-out;
 }
 
 #menu h2 a:hover {
     cursor: pointer;
-    color: var(--colorhighlight);
+    color: var(--colortitles);
     font-size: 95%;
 }
 
@@ -100,22 +106,24 @@
     position: absolute;
     border: none;
     align-self: flex-end;
-    font-size: 4vw;
+    font-size: 3.5vw;
     height: 100%;
+    background-color: black;
+    color: white;
 }
 
-#menu-close {
+#menu-close i {
     display: none;
 }
 
 #menu-open i:hover, #menu-close i:hover {
     cursor: pointer;
-    color: red;
+    color: var(--color7);
 }
 
 #menu nav ol {
     position: relative;
-    background-color: rgba(0, 0, 255, 0.694);
+    display: none;
     list-style: none;
     align-self: flex-end;
     width: 60%;
@@ -123,19 +131,23 @@
 }
 
 #menu nav ol li button {
-    border: solid 1px transparent;
-    width: 90%;
-    margin: 0.5vw 0;
-    padding: 1vw 0;
+    border: solid 0.2vw transparent;
+    width: 100%;
+    height: 100%;
+    padding: 1.5vw 0;
     font: italic 1.5vw var(--texttitles);
     transition: 0.1s ease-in-out;
+    background-color: black;
+    color: white;
 }
 
 #menu nav ol li button:hover {
     cursor: pointer;
-    border-color: black;
+    border-color: var(--color1);
     letter-spacing: 0.2vw;
+    color: var(--color7);
 }
+
 /*-----f-----menucascata-----f-----*/
 
 /*-----f-----cabecalho-----f-----*/
@@ -143,54 +155,120 @@
 
 
 /*-----i-----intro-----i-----*/
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 22%;
+    }
+}
+
 #main-intro {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 40vw;
-    border: solid 2px orange;
+    background: linear-gradient(to bottom, var(--color3), black 20%, black 95%, var(--color3));
 }
 
 #main-intro header {
     display: inherit;
     width: 100%;
-    height: 10%;
-    border: solid 1px blue;
-    text-align: center;
+    height: 15%;
     justify-content: center;
     align-items: center;
-    font: normal 1vw var(--texthighlight);
+}
+
+#main-intro header h1 {
+    overflow: hidden;
+    border-right: .15em solid var(--color2);
+    white-space: nowrap;
+    animation: typing 3s steps(20) infinite alternate;
+    font: normal 2vw var(--texthighlight);
+    color: white;
+    text-align: center;
 }
 
 #i-panel {
     display: inherit;
     flex-direction: row;
     width: 100%;
-    height: 90%;
-    border: solid 3px brown;
+    height: 85%;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 #i-panel div {
     display: inherit;
     flex-direction: column;
-    text-align: center;
+    padding: 0 2vw;
     width: 35%;
-    font: normal 1.5vw var(--texttitles);
+    font-family: var(--texttitles);
+}
+
+#i-panel div h1 {
+    font-size: 1.5vw;
+    color: var(--color5);
+    line-height: 1vw;
+}
+
+#i-panel div h1 strong {
+    font-size: 3.5vw;
+    color: white;
+}
+
+#i-panel div h3 {
+    font-size: 1.2vw;
+    color: var(--color5);
+}
+
+#i-panel div h3 strong {
+    font-size: 3.2vw;
+    color: white;
+}
+
+#i-panel div h5 {
+    padding: 3vw 0;
+    align-self: center;
+    font-size: 1.5vw;
+}
+
+#i-panel div h5 i {
+    margin-right: 0.5vw;
+}
+
+#i-panel div h5 a {
+    color: var(--color7);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#i-panel div h5 a:hover {
+    color: var(--colortitles);
+    text-decoration: underline;
 }
 
 #i-panel img {
     height: auto;
     width: 30%;
+    border-radius: 20vw;
 }
 
 #i-panel p {
-    display: inherit;
-    text-align: center;
+    position: relative;
+    bottom: 2vw;
+    text-align: right;
     width: 35%;
-    font: italic 2vw var(--texttyping);
+    font: italic 3vw var(--texthighlight);
+    padding: 0 2vw;
+}
+
+#i-panel p strong {
+    color: var(--color5);
 }
 
 /*-----f-----intro-----f-----*/
@@ -207,25 +285,42 @@
     height: 200vw;
     justify-content: center;
     align-items: center;
-    border: solid 5px teal;
 }
 
 .pi-topic {
     width: 100%;
     height: 100%;
-    border: solid 2px rebeccapurple;
     display: flex;
     flex-direction: column;
     padding: 2vw 7vw;
+    background: linear-gradient(to bottom, var(--color5), black 5%, black 95%, var(--color5));
+    color: white;
 }
 
 .pi-topic ul {
     list-style: none;
 }
 
+.pi-topic .pi-text {
+    margin: 1vw 0;
+    font: normal 1.7vw var(--texttyping);
+    letter-spacing: 0.1vw;
+    line-height: 2.5vw;
+}
+
+.pi-topic .pi-text a {
+    text-decoration: none;
+    color: var(--color7);
+}
+
+.pi-topic .pi-text a:hover {
+    text-decoration: underline;
+    color: var(--colortitles);
+}
+
 .pi-title {
     text-decoration: underline;
-    font: bold 2.5vw var(--texttitles);
+    font: bold 3.5vw var(--texttitles);
     letter-spacing: 0.5vw;
     margin-bottom: 2vw;
 }
@@ -256,11 +351,34 @@
     text-align: left;
 }
 
+#pi-skills #pi-main-list {
+    display: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70%;
+    width: 100%;
+}
+
+#pi-skills #pi-main-list .pi-text {
+    border: solid 0.2vw var(--color1);
+    padding: 1vw;
+}
+
+#pi-skills .pi-subtitle {
+    padding: 1vw 0;
+    color: var(--color5);
+}
+
+#pi-skills .pi-subtext {
+    text-align: center;
+}
+
 #pi-experience {
     display: inherit;
     align-items: flex-end;
     justify-content: flex-start;
-    text-align: right;
 }
 
 /*-----f-----sobre-----f-----*/
@@ -276,7 +394,6 @@
     align-items: center;
     width: 100%;
     height: 40vw;
-    border: solid 2px olive;
 }
 
 #main-projects header {
