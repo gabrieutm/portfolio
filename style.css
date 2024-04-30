@@ -97,9 +97,10 @@
     flex-direction: column;
     width: 25%;
     text-align: center;
+    justify-content: flex-start;
+    align-items: flex-end;
     padding-right: 2vw;
     z-index: 1;
-    flex: 1;
 }
 
 #menu-open, #menu-close {
@@ -126,25 +127,28 @@
     display: none;
     list-style: none;
     align-self: flex-end;
-    width: 60%;
+    width: 50%;
     top: 100%;
+    background-color: var(--color1);
+    padding: 0.2vw 0;
 }
 
 #menu nav ol li button {
     border: solid 0.2vw transparent;
-    width: 100%;
-    height: 100%;
-    padding: 1.5vw 0;
+    border-radius: 0.5vw;
+    padding: 0.5vw 0;
+    margin: 0.2vw 0;
+    width: 90%;
     font: italic 1.5vw var(--texttitles);
     transition: 0.1s ease-in-out;
-    background-color: black;
+    background-color: var(--color1);
     color: white;
 }
 
 #menu nav ol li button:hover {
     cursor: pointer;
-    border-color: var(--color1);
-    letter-spacing: 0.2vw;
+    background-color: rgba(0, 0, 0, 0.452);
+    letter-spacing: 0.1vw;
     color: var(--color7);
 }
 
@@ -171,7 +175,7 @@
     flex-direction: column;
     width: 100%;
     height: 40vw;
-    background: linear-gradient(to bottom, var(--color3), black 20%, black 95%, var(--color3));
+    background: linear-gradient(to bottom, var(--color5), black 20%);
 }
 
 #main-intro header {
@@ -402,7 +406,7 @@
     align-items: center;
     width: 100%;
     height: 20%;
-    border: solid 3px red;
+    background: linear-gradient(to bottom, var(--color5), var(--color3));
 }
 
 #main-projects header h1 {
@@ -414,30 +418,70 @@
     display: inherit;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
-    height: 70%;
-    border: solid 5px salmon;
+    height: 80%;
+    background: linear-gradient(to bottom, var(--color3) 50%, black);
 }
 
 .project {
-    width: 20%;
-    height: 80%;
-    border: solid 5px blue;
-}
-
-#main-projects footer {
-    display: inherit;
-    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 10%;
-    border: solid 3px red;
+    justify-content: center;
+    width: 20%;
+    height: 85%;
+    border: solid 0.5vw var(--color1);
+    border-radius: 0.5vw;
+    overflow: hidden;
 }
 
-#main-projects footer h1 {
-    font: bold 1vw var(--texttyping);
-    letter-spacing: 0.5vw;
+.project img {
+    position: absolute;
+    height: 100%;
+}
+
+.project:hover img {
+    filter: blur(3px);
+}
+
+.project h1 {
+    text-align: center;
+    font: bold 2vw var(--texttitles);
+    padding: 0 0.3vw;
+}
+
+.project p {
+    text-align: justify;
+    font: normal 1.2vw var(--texttyping);
+    line-height: 1.6vw;
+    padding: 0.5vw;
+}
+
+.project h1, .project p {
+    border-radius: 0.5vw;
+    opacity: 0;
+    z-index: 1;
+    align-self: center;
+    margin: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.712);
+    transition: 0.2s ease-in-out;
+    color: white;
+}
+
+.project:hover h1, .project:hover p {
+    opacity: 1;
+}
+
+.project p a i {
+    color: var(--color7);
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+.project p a i:hover {
+    color: var(--colortitles);
 }
 
 /*-----f-----projetos-----f-----*/

@@ -33,3 +33,33 @@ window.addEventListener('scroll', function() {
         menubar.style.display = 'none';
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = document.querySelectorAll('.project');
+    let currentProjectIndex = 0;
+
+    // Mostra o primeiro projeto inicialmente
+    projects[currentProjectIndex].classList.add('active');
+
+    // Função para mostrar o próximo projeto
+    function showNextProject() {
+        // Esconde o projeto atual
+        projects[currentProjectIndex].classList.remove('active');
+
+        // Incrementa o índice do projeto atual
+        currentProjectIndex++;
+
+        // Verifica se chegou ao final dos projetos
+        if (currentProjectIndex >= projects.length) {
+            currentProjectIndex = 0; // Retorna ao primeiro projeto se chegou ao final
+        }
+
+        // Mostra o próximo projeto
+        projects[currentProjectIndex].classList.add('active');
+    }
+
+    // Define um intervalo para trocar os projetos automaticamente (a cada 5 segundos)
+    setInterval(showNextProject, 5000);
+});
