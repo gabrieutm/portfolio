@@ -37,29 +37,38 @@ window.addEventListener('scroll', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const projects = document.querySelectorAll('.project');
-    let currentProjectIndex = 0;
+    document.getElementById("btn-intro").addEventListener("click", function() {
+        scrollToSection("main-intro");
+    });
 
-    // Mostra o primeiro projeto inicialmente
-    projects[currentProjectIndex].classList.add('active');
+    document.getElementById("btn-about").addEventListener("click", function() {
+        scrollToSection("pi-about");
+    });
 
-    // Função para mostrar o próximo projeto
-    function showNextProject() {
-        // Esconde o projeto atual
-        projects[currentProjectIndex].classList.remove('active');
+    document.getElementById("btn-education").addEventListener("click", function() {
+        scrollToSection("pi-education");
+    });
 
-        // Incrementa o índice do projeto atual
-        currentProjectIndex++;
+    document.getElementById("btn-skills").addEventListener("click", function() {
+        scrollToSection("pi-skills");
+    });
 
-        // Verifica se chegou ao final dos projetos
-        if (currentProjectIndex >= projects.length) {
-            currentProjectIndex = 0; // Retorna ao primeiro projeto se chegou ao final
+    document.getElementById("btn-experience").addEventListener("click", function() {
+        scrollToSection("pi-experience");
+    });
+
+    document.getElementById("btn-projects").addEventListener("click", function() {
+        scrollToSection("main-projects");
+    });
+
+    document.getElementById("btn-contact").addEventListener("click", function() {
+        scrollToSection("end-page");
+    });
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
-
-        // Mostra o próximo projeto
-        projects[currentProjectIndex].classList.add('active');
     }
-
-    // Define um intervalo para trocar os projetos automaticamente (a cada 5 segundos)
-    setInterval(showNextProject, 5000);
 });
