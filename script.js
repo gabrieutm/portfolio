@@ -12,7 +12,7 @@ menuopen.addEventListener('click', function() {
 });
 
 document.addEventListener('click', function(event) {
-    if (!event.target.closest('nav.menu-item') || event.target.closest('#menu-close')) {
+    if (!event.target.closest('nav.menu-item') || event.target.closest('#menu-close') || event.target.closest('nav.menu-item ol li button')) {
         menushow.style.display = 'none';
         menuclose.style.display = 'none';
         menuopen.style.display = 'block';

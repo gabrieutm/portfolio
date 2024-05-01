@@ -397,7 +397,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 40vw;
+    height: auto;
 }
 
 #main-projects header {
@@ -405,7 +405,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20%;
+    height: 6vw;
     background: linear-gradient(to bottom, var(--color5), var(--color3));
 }
 
@@ -417,11 +417,14 @@
 #projects {
     display: inherit;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    padding: 3vw;
     width: 100%;
-    height: 80%;
-    background: linear-gradient(to bottom, var(--color3) 50%, black);
+    min-height: 32vw;
+    height: auto;
+    background: linear-gradient(to bottom, var(--color3) 50%, black);    
 }
 
 .project {
@@ -430,11 +433,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    height: 85%;
+    margin: 0 2vw 5vw 2vw;
+    width: 23vw;
+    height: 30vw;
     border: solid 0.5vw var(--color1);
     border-radius: 0.5vw;
     overflow: hidden;
+    transition: 0.2s ease-in-out;
+    
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+#projects:has(.project:hover) .project:not(:hover) {
+    scale: 0.9;
+    opacity: 0.6;
 }
 
 .project img {
@@ -443,7 +457,7 @@
 }
 
 .project:hover img {
-    filter: blur(3px);
+    filter: blur(3px) brightness(1.15) contrast(1.2);
 }
 
 .project h1 {
@@ -464,8 +478,8 @@
     opacity: 0;
     z-index: 1;
     align-self: center;
-    margin: 0.5vw;
-    background-color: rgba(0, 0, 0, 0.712);
+    margin: 1vw;
+    background-color: rgba(0, 0, 0, 0.799);
     transition: 0.2s ease-in-out;
     color: white;
 }
