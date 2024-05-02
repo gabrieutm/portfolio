@@ -21,6 +21,7 @@ document.addEventListener('click', function(event) {
 
 
 
+//menu appear
 const menubar = document.getElementById('menu');
 const sectionfirst = document.getElementById('main-intro');
 
@@ -36,6 +37,7 @@ window.addEventListener('scroll', function() {
 
 
 
+//scroll
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btn-intro").addEventListener("click", function() {
         scrollToSection("main-intro");
@@ -71,4 +73,50 @@ document.addEventListener("DOMContentLoaded", function() {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     }
+});
+
+
+
+const experienceButtons = document.querySelectorAll('#pi-experience button');
+
+function closeAllExperienceSubtexts() {
+    const shownSubtexts = document.querySelectorAll('#pi-experience .pi-subtext');
+    shownSubtexts.forEach(shownSubtext => {
+        shownSubtext.style.display = 'none';
+    });
+    
+    const experienceCloseIcons = document.querySelectorAll('#pi-experience #experience-close');
+    experienceCloseIcons.forEach(experienceCloseIcon => {
+        experienceCloseIcon.style.display = 'none';
+    });
+
+    const experienceOpenIcons = document.querySelectorAll('#pi-experience #experience-open');
+    experienceOpenIcons.forEach(experienceOpenIcon => {
+        experienceOpenIcon.style.display = 'block';
+    });
+
+    const experienceTitleColors = document.querySelectorAll('#pi-experience .pi-subtitle');
+    experienceTitleColors.forEach(experienceTitleColor => {
+        experienceTitleColor.style.fontWeight = 'normal';
+    });
+}
+
+experienceButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const experienceSubtext = this.parentElement.querySelector('#pi-experience .pi-subtext');
+        const experienceOpen = this.querySelector('#experience-open');
+        const experienceClose = this.querySelector('#experience-close');
+        const experienceTitle = this.querySelector('#pi-experience .pi-subtitle');
+
+        const experienceIsOpen = experienceSubtext.style.display === 'block';
+        
+        closeAllExperienceSubtexts();
+        
+        if (!experienceIsOpen) {
+            experienceSubtext.style.display = 'block';
+            experienceOpen.style.display = 'none';
+            experienceClose.style.display = 'block';
+            experienceTitle.style.fontWeight = 'bold';
+        }
+    });
 });

@@ -175,7 +175,7 @@
     flex-direction: column;
     width: 100%;
     height: 40vw;
-    background: linear-gradient(to bottom, var(--color5), black 20%);
+    background: linear-gradient(to bottom, var(--color5), black 20%, black 95%, var(--color5));
 }
 
 #main-intro header {
@@ -381,8 +381,69 @@
 
 #pi-experience {
     display: inherit;
+    flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
+}
+
+#pi-experience ul {
+    display: inherit;
+    flex-direction: inherit;
+}
+
+#pi-experience ul li {
+    display: inherit;
+    flex-direction: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#pi-experience button {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: flex-end;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    padding: 0.3vw;
+}
+
+#pi-experience button i {
+    position: absolute;
+    font-size: 2vw;
+    color: white;
+}
+
+#pi-experience button:hover i, #pi-experience button:hover h1 {
+    color: var(--color7);
+}
+
+#experience-close {
+    display: none;
+}
+
+#pi-experience button h1 {
+    font: normal 2vw var(--texttitles);
+    margin-right: 3vw;
+    color: white;
+}
+
+#pi-experience .pi-subtitle {
+    position: relative;
+}
+
+#pi-experience .pi-subtext {
+    display: none;
+    text-align: justify;
+    font: normal 1.5vw var(--texttyping);
+    border: solid 0.3vw var(--color1);
+    padding: 0.5vw;
+    line-height: 2.5vw;
+    background-color: black;
+    margin: 0.5vw 0;
 }
 
 /*-----f-----sobre-----f-----*/
@@ -443,6 +504,8 @@
     
     &:hover {
         scale: 1.1;
+        border-color: var(--color7);
+        border-radius: 0;
     }
 }
 
